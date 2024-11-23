@@ -35,3 +35,7 @@ The dataset contains 23 categorical features:
 
 
 ## Run the project: 
+You can clone the repository and run the project in the conda environment specified in the environment.yml file. 
+To create the environment run: conda env create -f environment.yml.
+
+The dataset is located in the data folder. You can also download it by running the first three commands of the notebook midterm_project.ipynb or download it from kaggle via the link: https://www.kaggle.com/datasets/uciml/mushroom-classification. 
