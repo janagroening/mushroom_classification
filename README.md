@@ -35,7 +35,59 @@ The dataset contains 23 categorical features:
 
 
 ## Run the project: 
-You can clone the repository and run the project in the conda environment specified in the environment.yml file. 
-To create the environment run: conda env create -f environment.yml.
-
+You can clone the repository and run the notebooks in the conda environment specified in the environment.yml file. 
+To create the environment run: 
+```bash
+conda env create -f environment.yml
+```
+The environment is called ml-zoomcamp-ubuntu. You can activate it by running:
+```bash
+conda activate ml-zoomcamp-ubuntu
+``` 
 The dataset is located in the data folder. You can also download it by running the first three commands of the notebook midterm_project.ipynb or download it from kaggle via the link: https://www.kaggle.com/datasets/uciml/mushroom-classification. 
+
+## Running the Prediction Service
+
+1. Navigate to the scripts directory:
+```bash
+cd scripts
+```
+
+2. Start the prediction service using Gunicorn:
+```bash
+gunicorn --bind 0.0.0.0:9696 predict:app
+```
+
+3. Open a new terminal window, activate the environment, and navigate to the scripts directory again:
+```bash
+conda activate ml-zoomcamp-ubuntu
+cd scripts
+```
+
+4. Run the test script:
+```bash
+python predict_test.py
+```
+
+## Docker Deployment:
+For the Docker deployment, we use Pipenv as it provides better compatibility with Docker containers and helps manage dependencies in a more isolated way.
+
+1. Install Pipenv if you haven't already:
+```bash
+pip install pipenv
+``` 
+2. Activate the environment:
+```bash
+pipenv shell
+```
+
+3. Build the Docker image:
+```bash
+docker build -t mushroom-classifier .
+```
+
+4. Run the Docker container:
+```bash
+docker run -it --rm -p 9696:9696 mushroom-classifier
+```
+
