@@ -4,7 +4,7 @@ Mid-term project. Ml-Zoomcamp 2024
 ## Description of the problem: 
 
 The aim of the project is to build an train a Classifier that can distinguish between edible and poisonous mushrooms based on their physical characteristics. 
-This c ould serve as a supportive tool for mushroom identification. While this classifier aims to provide accurate predictions, it should not replace expert knowledge or traditional mushroom identification methods. Always consult mycology experts and reliable guidebooks for mushroom foraging.
+This could serve as a supportive tool for mushroom identification. While this classifier aims to provide accurate predictions, it should not replace expert knowledge or traditional mushroom identification methods. Always consult mycology experts and reliable guidebooks for mushroom foraging.
 
 
 The dataset comes from the UCI Machine Learning Repository and includes descriptions of hypothetical samples of 23 species of gilled mushrooms in the Agaricus and Lepiota Family. Each species is identified as definitely edible or definitely poisonous. Species where the edibility is unknown or it is not recommended where also assigned to the poisonous class. 
