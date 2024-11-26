@@ -8,7 +8,6 @@ COPY ["Pipfile", "Pipfile.lock", "./"]
 
 RUN pipenv install --system --deploy
 
-RUN mkdir scripts
 COPY ["scripts/predict.py", "./scripts/"]
 COPY ["models/mushroom_model.bin", "./models/"]
 
